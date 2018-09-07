@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<body>
+
+ <canvas id="canvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+  
+
+
+<img src="kkona.jpg" alt="Italian Trulli">
+
+	<h1 id="reeeeee">KKNONA KAT</h1>
+	<h2 id="pienempiheader">Kirjaudu sis‰lle!</h2>
+    
+    <form action="/action_page.php">
+  		UserName:<br>
+  	<input type="text" name="username" value="Kkona">
+  	<br>
+  		Password:<br>
+  	<input type="text" name="password" value="Kool">
+  	<br><br>
+  	<input type="submit" value="Login">
+	</form> 
+    
+    
+    
+    
+    <p><a href="https://www.google.com">T‰‰lt‰ p‰‰see googleen</a></p>
+     
+    <input id="clickMe" type="button" value="clickme" onclick="doFunction();" />
+    
+    <script>
+   		document.getElementById("clickMe").onclick = function() {myFunction()};
+
+		function myFunction() {
+    		console.log("REEEEEEE");
+		} 
+        
+        var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+        ctx.beginPath();
+       ctx.fillStyle = "blue";
+		ctx.fillRect(0, 0, c.width, c.height);
+		ctx.beginPath();
+
+        
+		ctx.beginPath();
+		ctx.arc(100,75,50,0,2*Math.PI);
+		ctx.stroke();
+     
+        
+    </script>
+   
+    
+    <ul>
+	<li>T‰‰ on t‰ll‰nen lista</li>
+
+	<li>T‰‰ on t‰ll‰nen lista</li>
+
+	<li>T‰‰ on t‰ll‰nen lista</li>
+	</ul>
+    
+    <ol>
+	<li>First item</li>
+
+	<li>Second item</li>
+
+	<li>Third item</li>
+	</ol>
+    
+    <p><code>code</code></p>
+    
+  
+</body>
+</html>
