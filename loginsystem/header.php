@@ -28,6 +28,7 @@
 
 <!-- 
 	tällänen table tällä hetkellä
+	database nimellä loginsystem
 	CREATE TABLE users (
 	user_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
     user_first varchar(256) not null,
