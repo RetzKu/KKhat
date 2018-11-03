@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 
 	if (empty($first) || empty($last) || empty($email)|| empty($uid) || empty($pwd))   {
 		# code...
-		header("Location: ../signup.php?signup=empty13");
+		header("Location: ../signup.php?signup=empty");
 		exit();
 	} 
 	else 
@@ -55,10 +55,8 @@ if (isset($_POST['submit'])) {
 				}
 			}
 		}		
-
 		header("Location: ../signup.php?singup=empty");
 		exit();
-
 	}
 
 } else {
