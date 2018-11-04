@@ -2,11 +2,11 @@
 
 if (isset($_POST['submit'])) {
 	include_once 'dbh.inc.php';
-	$first = mysql_real_escape_string($_POST['first']) ;
-	$last = mysql_real_escape_string($_POST['last']) ;
-	$email = mysql_real_escape_string($_POST['email']) ;
-	$uid = mysql_real_escape_string($_POST['uid']) ;
-	$pwd = mysql_real_escape_string($_POST['pwd']) ;
+	$first = mysqli_real_escape_string($conn, $_POST['first']) ;
+	$last = mysqli_real_escape_string($conn, $_POST['last']) ;
+	$email = mysqli_real_escape_string($conn, $_POST['email']) ;
+	$uid = mysqli_real_escape_string($conn, $_POST['uid']) ;
+	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']) ;
 
 	if (empty($first) || empty($last) || empty($email)|| empty($uid) || empty($pwd))   {
 		# code...
@@ -32,8 +32,8 @@ if (isset($_POST['submit'])) {
 			else
 			{
 				$sql = "SELECT * FROM users WHERE user_uid='$uid'";
-				$result = mysql_query($sql);
-				$resultCheck = mysql_num_rows ($result);
+				$result = mysqli_query($conn, $sql);
+				$resultCheck = mysqli_num_rows ($result);
 
 				if(resultCheck > 0)
 				{
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 					$sql = "INSERT INTO users (user_first,user_last,user_email,user_uid,user_pwd)
 						VALUES ('$first','$last','$email','$uid','$hashedPwd');";
 					//push bois in and if problems do error tests
-					$result = mysql_query($sql);
+					$result = mysqli_query($conn, $sql);
 					//$resultCheck = mysql_num_rows ($result);
 					header("Location: ../signup.php?singup=success");
 					exit();

@@ -6,8 +6,8 @@ if(isset($_POST['submit']))
 {
 	include 'dbh.inc.php';
 
-	$uid = mysql_real_escape_string($_POST['uid']);
-	$pwd = mysql_real_escape_string($_POST['pwd']);
+	$uid = mysqli_real_escape_string($conn,$_POST['uid']);
+	$pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
 	//error handles
 	if (empty($uid) || empty($pwd))
 	{
@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
 	}
 
 	$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
-	$result = mysql_query($sql);
+	$result = mysqli_query($conn, $sql);
 
 	if (!$result) 
 	{
@@ -24,13 +24,13 @@ if(isset($_POST['submit']))
 		exit();
 	}
 
-	$resultCheck = mysql_num_rows($result);
+	$resultCheck = mysqli_num_rows($result);
 	if($resultCheck == 0)
 	{
 		header("Location: ../signup.php?login=error");
 		exit();
 	}
-	$row = mysql_fetch_assoc($result);
+	$row = mysqli_fetch_assoc($result);
 	$hashedCheck = password_verify($pwd,$row['user_pwd']);
 	if($hashedCheck == false)
 	{
