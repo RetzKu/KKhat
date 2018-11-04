@@ -1,7 +1,7 @@
 <?php
 
 
-$dbServername = "localhost";
+$dbServername = "mikak.dclabra.fi"; //"localhost";
 $dbUsername = "root";
 $dbPassword = "";
 $dbName = "loginsystem";
