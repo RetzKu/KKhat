@@ -1,5 +1,3 @@
-<!-- moi poika, aiokko kommunikoida kanssamme -->
-<!-- löysin sut viimein! -->
 <?php
 session_start();
 ?>
@@ -53,4 +51,5 @@ else
 	user_uid varchar(256) not null,
 	user_pwd varchar(256) not null
 );
+testi
 -->

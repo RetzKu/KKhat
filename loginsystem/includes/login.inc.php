@@ -18,6 +18,8 @@ if(isset($_POST['submit']))
 	$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
 	$result = mysqli_query($conn, $sql);
 
+
+
 	if (!$result) 
 	{
 		header("Location: ../signup.php?login=dberror");
