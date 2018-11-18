@@ -17,21 +17,22 @@ class Chat implements MessageComponentInterface {
 	}
 
 	public function onOpen(ConnectionInterface $conn) {
-		echo 'reeee 20';
+		echo 'User connected';
 		$this->clients->attach($conn);
-		// $this->users[$conn->resourceId] = $conn;
+		$this->users[$conn->resourceId] = $conn;
 	}
 
 	public function onClose(ConnectionInterface $conn) {
+		echo 'User disconnected';
 		$this->clients->detach($conn);
-		// unset($this->users[$conn->resourceId]);
+		unset($this->users[$conn->resourceId]);
 	}
 
 	public function onMessage(ConnectionInterface $from,  $data) {
-		echo 'reeee 30';
 		$from_id = $from->resourceId;
 		$data = json_decode($data);
 		$type = $data->type;
+		echo 'message received';
 		echo $data->chat_msg;
 		switch ($type) {
 			case 'chat':
@@ -49,6 +50,8 @@ class Chat implements MessageComponentInterface {
 					}
 				}
 				break;
+			case 'login':
+				
 		}
 	}
 

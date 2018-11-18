@@ -1,9 +1,16 @@
+
 <?php
 session_start();
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" 
+      type="image/jpg" 
+	  href="https://i.redd.it/y2bfgm52vhwx.jpg">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -49,7 +56,8 @@ else
 	user_last varchar(256) not null,
 	user_email varchar(256) not null,
 	user_uid varchar(256) not null,
-	user_pwd varchar(256) not null
+	user_pwd varchar(256) not null,
+	user_profile_picture varchar(256)
 );
 testi
 -->

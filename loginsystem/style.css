@@ -103,6 +103,41 @@ input, select {
 
 /*MY CUSTOM STYLING*/
 
+
+.wrapper {
+	position:relative;
+	margin:auto;
+	max-width:10px;
+	height:100%;
+}
+
+.chat_output {
+	position:absolute;
+	top:0;
+	left:0;
+	padding:20px;
+	width:100%;
+	height:calc(100% - 100px);
+}
+.chat_input{
+	bottom:0;
+	left:0;
+	padding:50px;
+	width:100%;
+	height:100px;
+	margin-left:40vw;
+	border:1px solid #0000;
+}
+#footer ul{
+	clear: both;
+	font-family: arial;
+	font-size : 16px;
+	padding-top: 15px;
+	background-color: #f3f3;
+	text-align: center;
+}
+
+
 .main-wrapper {
 	margin: 0 auto;
 	width: 1000px;
@@ -230,3 +265,5 @@ header .nav-login a {
 .signup-form button:hover{
 	background-color: #111;
 }
+
+
