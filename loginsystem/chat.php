@@ -11,9 +11,27 @@ $session = mt_rand(1,999);
 	<style type="text/css">
 	* {margin:0;padding:0;box-sizing:border-box;font-family:arial,sans-serif;resize:none;}
 	html,body {width:100%;height:100%;}
-	#wrapper {position:relative;margin:auto;max-width:1000px;height:100%;}
-	#chat_output {position:absolute;top:0;left:0;padding:20px;width:100%;height:calc(100% - 100px);}
-	#chat_input {position:absolute;bottom:0;left:0;padding:10px;width:100%;height:100px;border:1px solid #ccc;}
+	#wrapper {position:relative;margin:auto;max-width:75%;height:85%}
+	#chat_output
+	{
+		position:absolute;
+		top:2%;
+		left:0;
+		padding:20px;
+		width:100%;
+		height:calc(100% - 100px);
+		background-color:white;
+	}
+	#chat_input 
+	{
+		position:absolute;
+		bottom:0;
+		left:0;
+		padding:10px;
+		width:100%;
+		height:100px;
+		border:1px solid #ccc;
+	}
 	</style>
 </head>
 <body>
@@ -29,6 +47,7 @@ $session = mt_rand(1,999);
 			};
 
 			var websocket_server = new WebSocket("ws://85.29.72.38:2222/");
+			//var websocket_server = new WebSocket("ws://192.168.1.3:8080/");
 
 			//KUn websocket kohtaa errorin
 			websocket_server.onerror = function (event){

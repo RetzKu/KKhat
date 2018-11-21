@@ -43,6 +43,12 @@ else
 ?>
 
 			</div>
+<?php
+			if(isset($_SESSION['u_id']))
+			{
+				echo "<form class=\"signup-form\" action=\"profile_page.php\"> <button type=\"profiili\" name=\"profiili\">profioli</button></form>";
+			}
+?>
 		</div>
 	</nav>
 </header>

@@ -1,5 +1,7 @@
+
+
 <?php
-include_once 'header.php';
+include 'header.php';
 ?>
 
 <head>
@@ -548,173 +550,185 @@ border-radius:5px;
 text-decoration:none;
 }
 
-
 </style>
 </head>
 
+<body>
+<h1>moi 13</h1>
+</body>
+
+<head>
 <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+            		
 
-<section class="main-container">
-	<div class="main-wrapper">
-		<h2>Profile page</h2>
+<body>
 
-<!--
-        <?php
-            echo "hello";
-            $muuttuja="eetu";
-            if ($muuttuja == "eetu") {
-                echo "Logged in as " . $muuttuja;
+	<section class="main-container">
+		<div class="main-wrapper">
+			<h2>Profile page</h2>
 
-                echo "<h1>Profile picture</h1>";
-                echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">";
-                echo "<button type=\"button\">Paina mua</button>";
+	<!--
+	        <?php
+	            echo "hello";
+	            $muuttuja="eetu";
+	            if ($muuttuja == "eetu") {
+	                echo "Logged in as " . $muuttuja;
 
-            } else {
-                echo "please login";
-            }
-		?>
-		-->
-	</div>
-</section>
+	                echo "<h1>Profile picture</h1>";
+	                echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">";
+	                echo "<button type=\"button\">Paina mua</button>";
+
+	            } else {
+	                echo "please login";
+	            }
+			?>
+			-->
+		</div>
+	</section>
 
 
-<!-- TODO update profile picture button -->
-<!--
-			<a href="updatephoto.php" title="Change Profile Picture"><img src="<?php echo $row['profile_picture'] ?>"><button>Update Picture</button></a>
--->
+	<!-- TODO update profile picture button -->
+	<!--
+				<a href="updatephoto.php" title="Change Profile Picture"><img src="<?php echo $row['profile_picture'] ?>"><button>Update Picture</button></a>
+	-->
 
-<!--
-<div id="container">
-	<div id="left-nav">
-			<div class="clip1">
-				
+	<!--
+	<div id="container">
+		<div id="left-nav">
+				<div class="clip1">
 
-				<?php
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
 
-            		include_once 'includes/dbh.inc.php';
-            		$uid = $_SESSION['u_uid'];
-	        		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
-	        		$result = mysqli_query($conn, $sql);
-            		$resultCheck = mysqli_num_rows($result);
-            		if ($resultCheck == 0 ) {
-                		echo "kuinka olet nolla";
-						echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">"
-					} else  {
+					<?php
 
-	// $row = mysqli_fetch_assoc($result);
-	// $hashedCheck = password_verify($pwd,$row['user_pwd']);
+						ini_set('display_errors', 1);
+						ini_set('display_startup_errors', 1);
+						error_reporting(E_ALL);
 
-						$row  = mysqli_fetch_assoc($result));
-						$kuva = $row['user_profile_picture'];
-						echo "$kuva";
-
-						if (is_null($kuva)) { 
-							// default kuva
+	            		include_once 'includes/dbh.inc.php';
+	            		$uid = $_SESSION['u_uid'];
+		        		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
+		        		$result = mysqli_query($conn, $sql);
+					/*
+	            		$resultCheck = mysqli_num_rows($result);
+	            		if ($resultCheck == 0 ) {
+	                		echo "kuinka olet nolla";
 							echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">"
-						} else {
-							echo "<img src=\"$kuva\" alt=\"Kkona\">"
+						} else  {
+
+		// $row = mysqli_fetch_assoc($result);
+		// $hashedCheck = password_verify($pwd,$row['user_pwd']);
+
+							$row  = mysqli_fetch_assoc($result));
+							$kuva = $row['user_profile_picture'];
+							echo "$kuva";
+
+							if (is_null($kuva)) { 
+								// default kuva
+								echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">"
+							} else {
+								echo "<img src=\"$kuva\" alt=\"Kkona\">"
+							}
 						}
-					}
 
-            		echo "$resultCheck";
-				?>
-				
-
-			</div>
-
-			<div class="user-details">
-				<h3><?php echo "php" ?>&nbsp;<?php echo "Gentleman" ?></h3>
-				<h2><?php echo "AE2" ?></h2>
-				<br>
-				<br>
-			</div>
-			<div class="user-details">
-			<button type="button" onclick="vaihdaKuva()"> Vaihda </button>
-			<textarea id="rikos" rows="1"></textarea>
-			</div>
+						echo "$resultCheck";
+						*/
+					?>
 
 
-		<form action="change_pic.php.php" method="POST">
-		<input type="text" name="link" placeholder="ProfilePicLink">
-			<button type="submit" name="submit">Change</button>
-        </form>
-	
+				</div>
+
+				<div class="user-details">
+					<h3><?php echo "php" ?>&nbsp;<?php echo "Gentleman" ?></h3>
+					<h2><?php echo "AE2" ?></h2>
+					<br>
+					<br>
+				</div>
+				<div class="user-details">
+				<button type="button" onclick="vaihdaKuva()"> Vaihda </button>
+				<textarea id="rikos" rows="1"></textarea>
+				</div>
+
+
+			<form action="change_pic.php.php" method="POST">
+			<input type="text" name="link" placeholder="ProfilePicLink">
+				<button type="submit" name="submit">Change</button>
+	        </form>
+					
+		</div>
+	-->
+
+	<div>
+		<div id="right-nav">
+			<h1>Personal Info</h1>
+			<hr />
+			<br />
+	        <?php
+
+					
+	        if(isset($_SESSION['u_id'])) {
+
+
+	            include_once 'includes/dbh.inc.php';
+
+	            // $uid = mysqli_real_escape_string($conn,$_POST['uid']);
+
+	            $uid = $_SESSION['u_uid'];
+
+		        $sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
+		        //$sql = "SELECT * FROM users WHERE user_uid=\"thickmick\" ";
+		        $result = mysqli_query($conn, $sql);
+
+	            $resultCheck = mysqli_num_rows($result);
+	            if ($resultCheck == 0) {
+	                echo "kuinka olet nolla";
+				} 
+
+
+
+	            echo "$resultCheck";
+
+	            // TODO: jatka
+	            // https://www.sourcecodester.com/tutorials/php/10381/profile-information-page-phpmysql.html
+
+	            while ($test = mysqli_fetch_assoc($result)) {
+					$id = $test['user_id'];	
+					echo " <div class='info-user'>";
+					echo " <div>";
+					echo " <label>Firstname</label>&nbsp;&nbsp;&nbsp;<b>".$test['user_first']."</b>";
+					echo "</div> ";
+					echo "<hr /> ";		
+					echo "<br /> ";		
+					echo " <div>";
+					echo " <label>Lastname</label>&nbsp;&nbsp;&nbsp;&nbsp;<b>".$test['user_last']."</b>";
+					echo "</div> ";
+					echo "<hr /> ";	
+					echo "<br /> ";		
+					echo " <div>";
+					echo " <label>Username</label>&nbsp;&nbsp;&nbsp;<b>".$test['user_uid']."</b>";
+					echo "</div> ";
+					echo "<hr /> ";	
+					echo "<br /> ";		
+					echo " <div>";
+					echo " <label>email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>".$test['user_email']."</b>";
+					echo "</div> ";
+					echo "</div> ";
+					echo "<br /> ";		
+					echo " <div class='edit-info'>";
+					echo " <a href ='edit_profile.php?user_id=$id'><button>Edit Profile</button></a>";
+					echo "</div> ";
+					echo "<br /> ";	
+					echo "<br /> ";	
+	            }
+	        } else {
+	            echo "motha fucking ass";
+	        }
+			?>
+		</div>
 	</div>
--->
-
-<div>
-	<div id="right-nav">
-		<h1>Personal Info</h1>
-		<hr />
-		<br />
-        <?php
-
-        
-        if(isset($_SESSION['u_id'])) {
-
-
-            include_once 'includes/dbh.inc.php';
-
-            // $uid = mysqli_real_escape_string($conn,$_POST['uid']);
-
-            $uid = $_SESSION['u_uid'];
-
-	        $sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
-	        //$sql = "SELECT * FROM users WHERE user_uid=\"thickmick\" ";
-	        $result = mysqli_query($conn, $sql);
-
-            $resultCheck = mysqli_num_rows($result);
-            if ($resultCheck == 0) {
-                echo "kuinka olet nolla";
-			} 
-
-
-
-            echo "$resultCheck";
-
-            // TODO: jatka
-            // https://www.sourcecodester.com/tutorials/php/10381/profile-information-page-phpmysql.html
-
-            while ($test = mysqli_fetch_assoc($result)) {
-				$id = $test['user_id'];	
-				echo " <div class='info-user'>";
-				echo " <div>";
-				echo " <label>Firstname</label>&nbsp;&nbsp;&nbsp;<b>".$test['user_first']."</b>";
-				echo "</div> ";
-				echo "<hr /> ";		
-				echo "<br /> ";		
-				echo " <div>";
-				echo " <label>Lastname</label>&nbsp;&nbsp;&nbsp;&nbsp;<b>".$test['user_last']."</b>";
-				echo "</div> ";
-				echo "<hr /> ";	
-				echo "<br /> ";		
-				echo " <div>";
-				echo " <label>Username</label>&nbsp;&nbsp;&nbsp;<b>".$test['user_uid']."</b>";
-				echo "</div> ";
-				echo "<hr /> ";	
-				echo "<br /> ";		
-				echo " <div>";
-				echo " <label>email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>".$test['user_email']."</b>";
-				echo "</div> ";
-				echo "</div> ";
-				echo "<br /> ";		
-				echo " <div class='edit-info'>";
-				echo " <a href ='edit_profile.php?user_id=$id'><button>Edit Profile</button></a>";
-				echo "</div> ";
-				echo "<br /> ";	
-				echo "<br /> ";	
-            }
-        } else {
-            echo "motha fucking ass";
-        }
-		?>
-	</div>
-</div>
+</body>
 
 
 <?php
-	include_once 'footer.php';
+	include 'footer.php';
 ?>

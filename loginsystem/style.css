@@ -140,7 +140,7 @@ input, select {
 
 .main-wrapper {
 	margin: 0 auto;
-	width: 1000px;
+	width: 75%;
 }
 
 body {
@@ -232,9 +232,9 @@ header .nav-login a {
 	text-align: center;
 }
 .signup-form {
-	width: 400px;
-	margin: 0 auto;
-	padding-top: 30px;
+	width: 30%;
+	margin-left: 8%;
+	padding-top: 15px;
 }
 .signup-form input{
 	width: 90%;
@@ -251,9 +251,9 @@ header .nav-login a {
 
 .signup-form button{
 	display: block;
-	margin: 0 auto;
+	float: left;
 	width: 30%;
-	height: 40px;
+	height: 30px;
 	border: none;
 	background-color: #222;
 	font-family: arial;
