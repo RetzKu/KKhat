@@ -593,7 +593,10 @@ text-decoration:none;
 				<a href="updatephoto.php" title="Change Profile Picture"><img src="<?php echo $row['profile_picture'] ?>"><button>Update Picture</button></a>
 	-->
 
-	<!--
+
+
+
+
 	<div id="container">
 		<div id="left-nav">
 				<div class="clip1">
@@ -609,30 +612,37 @@ text-decoration:none;
 	            		$uid = $_SESSION['u_uid'];
 		        		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
 		        		$result = mysqli_query($conn, $sql);
-					/*
-	            		$resultCheck = mysqli_num_rows($result);
+					
+						$resultCheck = mysqli_num_rows($result);
+						
+				
+
+						
 	            		if ($resultCheck == 0 ) {
 	                		echo "kuinka olet nolla";
-							echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">"
-						} else  {
+							echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">";
+						}
+						
+						
+						else  {
 
 		// $row = mysqli_fetch_assoc($result);
 		// $hashedCheck = password_verify($pwd,$row['user_pwd']);
 
-							$row  = mysqli_fetch_assoc($result));
+							$row  = mysqli_fetch_assoc($result);
 							$kuva = $row['user_profile_picture'];
 							echo "$kuva";
 
 							if (is_null($kuva)) { 
 								// default kuva
-								echo "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">"
+								echo( "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">" );
 							} else {
-								echo "<img src=\"$kuva\" alt=\"Kkona\">"
+								echo(  "<img src=\"$kuva\" alt=\"Kkona\">" );
 							}
 						}
 
 						echo "$resultCheck";
-						*/
+					
 					?>
 
 
@@ -656,7 +666,6 @@ text-decoration:none;
 	        </form>
 					
 		</div>
-	-->
 
 	<div>
 		<div id="right-nav">
