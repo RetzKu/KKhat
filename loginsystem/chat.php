@@ -1,5 +1,10 @@
 <?php
-$session = mt_rand(1,999);
+//Tähän heitetään se accountin nimi
+if(isset($_SESSION['u_id']))
+{
+	$session = $_SESSION['u_uid'];
+	$sessionID = $_SESSION['u_id'];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,7 +81,7 @@ $session = mt_rand(1,999);
 				websocket_server.send(
 					JSON.stringify({
 						'type':'socket',
-						'user_id':<?php echo $session; ?>
+						'user_id':<?php echo $sessionID; ?>
 					})
 				);
 			};
@@ -99,10 +104,11 @@ $session = mt_rand(1,999);
 				//document.write(68);
 				//writeToScreen("CONNECTED reee 57");
 					var chat_msg = $(this).val();
+					var user_id = '<?php echo($session); ?>';
 					websocket_server.send(
 						JSON.stringify({
 							'type':'chat',
-							'user_id':<?php echo $session; ?>,
+							'user_id': user_id,
 							'chat_msg':chat_msg
 						})
 					);

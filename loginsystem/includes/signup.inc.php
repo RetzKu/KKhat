@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 					//push bois in and if problems do error tests
 					$result = mysqli_query($conn, $sql);
 					//$resultCheck = mysql_num_rows ($result);
-					header("Location: ../signup.php?singup=success");
+					header("Location: ../index.php?singup=success");
 					exit();
 				}
 			}

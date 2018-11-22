@@ -12,10 +12,6 @@ include_once 'header.php';
 			<input type="password" name="pwd" placeholder="Password">
 			<button type="submit" name="submit">Sign Up</button>
 		</form>
-
-		<form class="signup-form" action="profile_page.php">
-			<button type="profiili" name="profiili">profioli</button>
-		</form>
 	</div>
 </section>
 
