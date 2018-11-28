@@ -553,9 +553,6 @@ text-decoration:none;
 </style>
 </head>
 
-<body>
-<h1>moi 13</h1>
-</body>
 
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -631,17 +628,16 @@ text-decoration:none;
 
 							$row  = mysqli_fetch_assoc($result);
 							$kuva = $row['user_profile_picture'];
-							echo "$kuva";
+							// echo "$kuva";
 
 							if (is_null($kuva)) { 
 								// default kuva
 								echo( "<img src=\"https://i.redd.it/y2bfgm52vhwx.jpg\" alt=\"Kkona\">" );
 							} else {
-								echo(  "<img src=\"$kuva\" alt=\"Kkona\">" );
+								echo(  "<img src=\"$kuva\" alt=\"Image not found kool\">" );
 							}
 						}
 
-						echo "$resultCheck";
 					
 					?>
 
@@ -653,14 +649,18 @@ text-decoration:none;
 					<h2><?php echo "AE2" ?></h2>
 					<br>
 					<br>
+
+
+
 				</div>
+<!--
 				<div class="user-details">
 				<button type="button" onclick="vaihdaKuva()"> Vaihda </button>
 				<textarea id="rikos" rows="1"></textarea>
-				</div>
+				</div> -->
 
 
-			<form action="change_pic.php.php" method="POST">
+			<form action="change_pic.php" method="POST">
 			<input type="text" name="link" placeholder="ProfilePicLink">
 				<button type="submit" name="submit">Change</button>
 	        </form>
@@ -695,7 +695,7 @@ text-decoration:none;
 
 
 
-	            echo "$resultCheck";
+	            // echo "$resultCheck";
 
 	            // TODO: jatka
 	            // https://www.sourcecodester.com/tutorials/php/10381/profile-information-page-phpmysql.html

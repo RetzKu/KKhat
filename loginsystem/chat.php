@@ -26,6 +26,8 @@ if(isset($_SESSION['u_id']))
 		width:100%;
 		height:calc(100% - 100px);
 		background-color:white;
+		scroll-behavior:auto;
+		overflow:auto;
 	}
 	#chat_input 
 	{
@@ -34,7 +36,7 @@ if(isset($_SESSION['u_id']))
 		left:0;
 		padding:10px;
 		width:100%;
-		height:100px;
+		height:85px;
 		border:1px solid #ccc;
 	}
 	</style>
